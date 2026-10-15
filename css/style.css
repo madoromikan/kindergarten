@@ -1,0 +1,1079 @@
+@charset "UTF-8";
+
+/*
+COLORS
+================================================ */
+:root {
+  /* Color */
+  --text: #554433;
+  --background: #FFFBE8;
+  --hero-background: #E3D8BD;
+  --footer-background: #C0DAB4;
+  --primary: #5F893A;
+  --secondary: #FFFEF8;
+
+  --black: #554433;
+  --white: #FFFEF8;
+  --cream: #FFFBE8;
+  --dark-gray: #55443380;
+  --gray: #F2F2F2;
+  --green: #5F893A;
+  --pale-green: #C0DAB4;
+  --light-brown: #E3D8BD;
+  --blue: #D2E6F0;
+}
+
+/*
+GENERAL STYLING
+================================================ */
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: var(--white);
+  font-family: "IBM Plex Sans JP", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--text);
+}
+
+/*
+COMMON
+================================================ */
+p {
+  line-height: 1.5;
+  text-align: justify;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* LOGO */
+.logo-ja {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 700;
+}
+
+.logo-en {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* SECTION TITLE */
+.section-title {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 20px;
+}
+
+/* BUTTON PRIMARY */
+.btn {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  font-size: 16px;
+  color: var(--primary);
+  background-color: var(--secondary);
+  border: 2px solid var(--primary);
+  border-radius: 30px;
+  padding: 12px 30px;
+}
+
+.btn .material-symbols-rounded {
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+/* BUTTON SECONDARY */
+.btn.secondary {
+  color: var(--secondary);
+  background-color: var(--primary);
+  font-weight: 300;
+}
+
+/*
+LAYOUT
+================================================ */
+.wrapper {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.pc-only {
+  display: none !important;
+}
+
+/*
+HEADER-HERO
+================================================ */
+.header-hero {
+  background-image: linear-gradient(var(--light-brown) 60%, var(--cream) 80%);
+}
+
+/*
+HEADER
+================================================ */
+header {
+  padding: 15px;
+}
+
+header .logo-ja {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+header .logo-en {
+  font-size: 14px;
+  margin-left: 4px;
+}
+
+/* MENU NAV */
+.menu-btn {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 10;
+}
+
+.menu-btn .material-symbols-rounded {
+  display: block;
+  font-size: 44px;
+  margin-bottom: -10px;
+}
+
+#menu-panel {
+  width: 80vw;
+  height: 100vh;
+  background: var(--background);
+  box-shadow: 0 0 2rem var(--black);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 11;
+  translate: 100vw;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5vh;
+}
+
+.menu-list li {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.image-menu {
+  width: 75vw;
+  height: auto;
+}
+
+/*
+HERO
+================================================ */
+#hero {
+  position: relative;
+  padding-bottom: 80px;
+}
+
+/* IMAGE */
+.hero__images {
+  position: relative;
+  height: 400px;
+}
+
+.hero__images .image-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 75% center;
+  position: absolute;
+}
+
+.hero__images .image-kindergarten {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  bottom: -45px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 2;
+}
+
+.hero__images .image-tree {
+  width: auto;
+  height: 100px;
+  object-fit: cover;
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+}
+
+.hero__images .image-bus {
+  width: auto;
+  height: 70px;
+  position: absolute;
+  top: 103%;
+  right: 20vw;
+  z-index: 3;
+  translate: 20vw 0;
+}
+
+.hero-textbox {
+  position: relative;
+  padding: 120px 0 80px;
+}
+
+.hero-textbox .headline {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--green);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero-textbox .text {
+  font-weight: 500;
+  text-align: center;
+}
+
+.hero-textbox .image-flower01,
+.hero-textbox .image-flower02,
+.hero-textbox .image-flower03,
+.hero-textbox .image-flower04 {
+  height: auto;
+  opacity: .7;
+  position: absolute;
+}
+
+.hero-textbox .image-flower01 {
+  width: 30px;
+  top: 10%;
+  left: 20px;
+  transform: scale(-1, 1);
+}
+
+.hero-textbox .image-flower02 {
+  width: 40px;
+  top: 48%;
+  left: 10px;
+  transform: scale(-1, 1);
+}
+
+.hero-textbox .image-flower03 {
+  width: 30px;
+  top: 40%;
+  right: 10px;
+}
+
+.hero-textbox .image-flower04 {
+  width: 40px;
+  top: 80%;
+  right: 30px;
+}
+
+.hero-topicsbox {
+  color: var(--secondary);
+  background: var(--primary);
+  border-radius: 50px 0 0 50px;
+  width: fit-content;
+  margin-left: auto;
+  padding: 18px 30px 18px 50px;
+}
+
+.hero-topicsbox .box-title {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 500;
+  color: var(--secondary);
+  margin-bottom: 4px;
+}
+
+/*
+ABOUT-PHILOSOPHY-LIFE
+================================================ */
+.about-philosophy-life {
+  padding: 0 15px 100px;
+  background: var(--cream);
+}
+
+.about-philosophy-life .container {
+  position: relative;
+  padding: 0;
+}
+
+#about,
+#philosophy,
+#life {
+  display: flex;
+  flex-direction: column;
+}
+
+#philosophy {
+  margin: 100px 0;
+}
+
+.about-philosophy-life .section-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 40px 40px 0 0;
+}
+
+.section-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--white);
+  border-radius: 0 0 40px 40px;
+  padding: 30px 25px;
+}
+
+.section-text p {
+  margin: 20px 0;
+}
+
+/* IMAGES */
+.image-philosophy {
+  width: 80px;
+  height: auto;
+  position: absolute;
+  top: 35%;
+  right: 0;
+  z-index: 1;
+}
+
+.image-philosophy .image-bird01 {
+  width: 100%;
+  height: auto;
+  transform: rotateZ(5deg);
+  position: absolute;
+  top: -30px;
+  bottom: 0;
+  left: -70%;
+  right: 0;
+  margin: auto;
+  translate: 100px 50px;
+}
+
+.image-philosophy .image-bird02 {
+  width: 65%;
+  height: auto;
+  transform: rotateZ(10deg);
+  position: absolute;
+  top: 0;
+  bottom: -30px;
+  left: 0;
+  right: -70%;
+  margin: auto;
+  translate: 100px 50px;
+}
+
+.image-life {
+  width: 110px;
+  height: auto;
+  transform: rotate(-5deg);
+  position: absolute;
+  top: 69%;
+  left: 20px;
+  z-index: 1;
+}
+
+.image-life .image-piano {
+  width: 100%;
+  height: auto;
+  transform: rotate(-10deg);
+  position: absolute;
+  top: -20px;
+  bottom: 0;
+  left: -70%;
+  right: 0;
+  margin: auto;
+}
+
+.image-life .image-kureyon {
+  width: 40%;
+  height: auto;
+  transform: rotate(20deg);
+  position: absolute;
+  top: 0;
+  bottom: -20px;
+  left: 0;
+  right: -70%;
+  margin: auto;
+}
+
+/*
+INFORMATION
+================================================ */
+#information {
+  position: relative;
+  padding: 0 0 120px;
+}
+
+#information .section-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+}
+
+#information .section-content {
+  padding: 30px 40px;
+}
+
+#information .section-text {
+  padding: 0;
+  align-items: end;
+}
+
+/* IMAGED */
+.image-information {
+  width: auto;
+  height: 80px;
+  aspect-ratio: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+}
+
+.image-information .image-boy {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  left: -40%;
+  translate: -10vw 0;
+}
+
+.image-information .image-girl {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  right: -40%;
+  translate: 10vw 0;
+}
+
+/*
+TOPICS
+================================================ */
+#topics .section-content {
+  background: var(--gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 40px;
+  padding: 30px 25px;
+}
+
+#topics .topics-items {
+  margin: 40px 0;
+  width: 100%;
+}
+
+#topics .topics-items li {
+  border-bottom: 1px dashed var(--text);
+  padding: .5rem;
+}
+
+#topics .topics-items li:first-child {
+  border-top: 1px dashed var(--text);
+}
+
+#topics .topics-items .topics-date {
+  color: var(--dark-gray);
+}
+
+/*
+CONTACTS
+================================================ */
+#contacts {
+  background-image: linear-gradient(transparent 0%, var(--blue) 70%);
+  padding: 100px 0 180px;
+}
+
+#contacts .section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contacts .contacts-text {
+  margin: 30px 0;
+}
+
+/*
+FOOTER
+================================================ */
+footer {
+  background-color: var(--footer-background);
+  display: flex;
+  flex-direction: column;
+}
+
+/* IMAGE */
+.footer__images {
+  position: relative;
+}
+
+.footer__images .image-kindergarten {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  bottom: -55px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 2;
+}
+
+.footer__images .image-tree {
+  width: auto;
+  height: 100px;
+  object-fit: cover;
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+}
+
+.footer__images .image-butterfly {
+  width: 40px;
+  height: auto;
+  transform: rotateZ(-15deg);
+  position: absolute;
+  bottom: 50px;
+  right: 30vw;
+  z-index: 3;
+}
+
+
+.footer__contents {
+  padding: 100px 0 20px;
+}
+
+.footer__contents__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer__contents__text .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer__contents__text .logo-ja {
+  font-size: 24px;
+  margin-bottom: 2px;
+}
+
+.footer__contents__text .logo-en {
+  font-size: 16px;
+}
+
+.footer__contents__text .address {
+  text-align: center;
+}
+
+.footer__contents__text .map {
+  margin-bottom: 10px;
+}
+
+
+.copy {
+  font-family: "Zen Maru Gothic", serif;
+  text-align: center;
+}
+
+/* ================================================
+TABLET SIZE
+================================================ */
+@media (min-width: 768px) {
+
+  /* --- LAYOUT --- */
+  .sp-only {
+    display: none !important;
+  }
+
+  .pc-only {
+    display: block !important;
+  }
+
+  /* --- HEADER-HERO --- */
+  /* --- HEADER --- */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  /* MENU NAV */
+  #menu-panel {
+    position: relative;
+    translate: 0;
+    width: auto;
+    height: auto;
+    background: transparent;
+    box-shadow: none;
+    flex-direction: row;
+    align-items: end;
+  }
+
+  .menu-list {
+    margin: 0px;
+  }
+
+  .menu-list li {
+    letter-spacing: 0;
+    font-size: 14px;
+  }
+
+  .menu-list.upper {
+    flex-direction: row;
+  }
+
+  .menu-list.upper li {
+    margin: 0 2vw 0 0;
+  }
+
+  .menu-list.upper li a::before {
+    content: '';
+    display: block;
+    height: 60px;
+    width: auto;
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: auto auto -10px;
+  }
+
+  .menu-list.upper li:nth-child(2) a::before {
+    background-image: url('../images/menu-bus.png');
+  }
+
+  .menu-list.upper li:nth-child(3) a::before {
+    background-image: url('../images/menu-bird.png');
+  }
+
+  .menu-list.upper li:nth-child(4) a::before {
+    background-image: url('../images/menu-piano.png');
+  }
+
+  .menu-list.upper li:nth-child(5) a::before {
+    background-image: url('../images/menu-children.png');
+  }
+
+  .menu-list.upper li:nth-child(6) a::before {
+    background-image: url('../images/menu-mogura.png');
+  }
+
+  .menu-list.lower {
+    align-items: end;
+    margin: 0;
+  }
+
+  .menu-list.lower li {
+    margin: 0;
+  }
+
+  .menu-list.lower li:nth-child(2) {
+    margin: 5px 0;
+  }
+
+  /* --- HERO --- */
+  /* IMAGE */
+  .hero__images .image-kindergarten {
+    left: 10vw;
+    right: auto;
+  }
+
+  .hero__images .image-bus {
+    right: 20vw;
+    translate: 20vw 0;
+  }
+
+  .hero-textbox .headline {
+    font-size: min(3.5vw, 32px);
+    margin-bottom: 80px;
+  }
+
+  .hero-textbox .text {
+    line-height: 2.0;
+    letter-spacing: .1em;
+    font-size: 18px;
+  }
+
+  .hero-textbox .image-flower01 {
+    width: 3vw;
+    left: 5vw;
+  }
+
+  .hero-textbox .image-flower02 {
+    width: 4vw;
+    left: 5vw;
+  }
+
+  .hero-textbox .image-flower03 {
+    width: 3vw;
+    right: 5vw;
+  }
+
+  .hero-textbox .image-flower04 {
+    width: 4vw;
+    right: 5vw;
+  }
+
+  .hero-textbox .image-hero {
+    width: 150px;
+    top: 90%;
+    left: 3vw;
+  }
+
+  .hero-topicsbox {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    padding: 40px;
+    border-radius: 0 0 0 60px;
+    border-bottom: 1px solid var(--secondary);
+    border-left: 1px solid var(--secondary);
+  }
+
+  .hero-topicsbox .box-title {
+    display: none;
+  }
+
+  .hero-topicsbox .box-desc {
+    font-family: "Zen Maru Gothic", serif;
+    font-size: 18px;
+    font-weight: 500;
+    writing-mode: vertical-rl;
+    letter-spacing: 0.2em;
+  }
+
+  /* --- ABOUT-PHILOSOPHY-LIFE --- */
+  .about-philosophy-life .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #about,
+  #philosophy,
+  #life {
+    width: 31%;
+  }
+
+  #philosophy {
+    margin: 0;
+  }
+
+  .section-text {
+    height: 270px;
+    position: relative;
+  }
+
+  .section-text .btn {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  /* IMAGES */
+  .image-philosophy {
+    top: -12%;
+    right: 20px;
+  }
+
+  .image-life {
+    top: 112%;
+    left: 40px;
+  }
+
+  /* --- INFORMATION --- */
+  #information {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 15px;
+    display: flex;
+  }
+
+  #information .section-image {
+    width: 60%;
+    aspect-ratio: 5/2;
+    object-position: bottom right;
+    border-radius: 20px 0 0 20px;
+  }
+
+  #information .section-content {
+    width: calc(40% + 150px);
+    background-image: linear-gradient(to right, transparent 0%, var(--white) 20%);
+    padding: 30px 25px 30px 175px;
+    margin-left: -150px;
+  }
+
+  #information .section-content .section-text {
+    background: transparent;
+  }
+
+  #information .section-text .btn {
+    bottom: 0;
+    left: auto;
+    right: 0;
+    margin: 0;
+  }
+
+  /* IMAGES */
+  .image-information {
+    top: 93%;
+  }
+
+  .image-information .image-boy {
+    translate: -100px 0;
+  }
+
+  .image-information .image-girl {
+    translate: 100px 0;
+  }
+
+  /* --- TOPICS --- */
+  #topics {
+    padding: 100px 15px 0;
+  }
+
+  #topics .section-content {
+    padding: 30px 25px;
+  }
+
+  #topics .topics-items {
+    margin: 50px 0;
+  }
+
+  #topics .topics-items li {
+    padding: 20px 50px;
+  }
+
+  #topics .topics-items .topics-date {
+    display: inline-block;
+    width: 20%;
+  }
+
+  #topics .topics-items .topics-title {
+    display: inline-block;
+  }
+
+  /* --- CONTACTS --- */
+  #contacts {
+    background-image: linear-gradient(transparent 0%, var(--blue) 95%);
+    padding: 200px 0 0;
+  }
+
+  /* --- FOOTER --- */
+  /* IMAGE */
+  .footer__images .image-kindergarten {
+    left: 10vw;
+    right: auto;
+    margin: 0;
+  }
+
+  .footer__images .image-butterfly {
+    left: calc(10vw + 200px);
+    bottom: 100px;
+    right: auto;
+  }
+
+
+  .footer__contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+    margin: 0 auto;
+    padding: 80px 12vw 40px;
+  }
+
+  .footer__contents__text {
+    align-items: start;
+  }
+
+  .footer__contents__text .logo {
+    align-items: start;
+  }
+
+  .footer__contents__text .logo-ja {
+    margin-left: -4px;
+  }
+
+  .footer__contents__text .logo-en {
+    text-align: left;
+  }
+
+  .footer__contents__text .address {
+    text-align: left;
+  }
+
+  .footer__contents__contacts {
+    display: block;
+    width: 300px;
+  }
+
+  .footer__contents__contacts .btn {
+    margin: 10px 0 5px auto;
+  }
+
+  .footer__menu {
+    display: flex !important;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .footer__menu li {
+    border-right: 1px solid var(--text);
+  }
+
+  .footer__menu li:last-child {
+    border-right: none;
+  }
+
+  .footer__menu a {
+    font-size: 14px;
+    margin: 0 1vw;
+  }
+}
+
+/* ================================================
+PC SIZE
+================================================ */
+@media (min-width: 1025px) {
+
+  /* --- COMMON --- */
+  .section-title {
+    font-size: 28px;
+  }
+
+  /* --- LAYOUT --- */
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* --- HEADER-HERO --- */
+  /* --- HERO --- */
+  /* IMAGE */
+  .hero__images {
+    height: 500px;
+  }
+
+  .hero__images .image-kindergarten {
+    width: 250px;
+    bottom: -55px;
+  }
+
+  .hero__images .image-tree {
+    height: 125px;
+    bottom: -50px;
+  }
+
+  .hero__images .image-bus {
+    height: 105px;
+    top: 105%;
+  }
+
+  .hero-textbox {
+    padding: 150px 0 80px;
+  }
+
+  /* --- CONTACTS --- */
+  #contacts {
+    padding: 300px 0 0;
+  }
+
+  /* --- FOOTER --- */
+  /* IMAGE */
+  .footer__images .image-kindergarten {
+    width: 250px;
+  }
+
+  .footer__images .image-tree {
+    height: 125px;
+  }
+
+  .footer__images .image-butterfly {
+    width: 60px;
+    left: calc(10vw + 250px);
+  }
+
+
+  /* --- HOVER --- */
+  a:hover {
+    color: var(--primary);
+    transition: 1s;
+  }
+
+  .menu-list li a:hover::before {
+    opacity: .6;
+    transition: 1s;
+  }
+
+  .hero-topicsbox .box-desc:hover {
+    color: var(--text);
+    transition: 1s;
+  }
+
+  #topics .topics-items a:hover .topics-date,
+  #topics .topics-items a:hover .topics-title {
+    color: var(--primary);
+    transition: 1s;
+  }
+
+  .btn:hover {
+    color: var(--secondary);
+    background-color: var(--primary);
+    transition: 1s;
+  }
+
+  .btn.secondary:hover {
+    color: var(--primary);
+    background-color: var(--secondary);
+  }
+
+}
