@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | 幼稚園の仮想サイト</title>
+    <meta name="discription" content="本ページは架空の幼稚園をイメージしたポートフォリオサイトです。">
+    <link rel="icon" type="image/svg+xml" href="">
+
+    <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500&family=Zen+Maru+Gothic:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,300,0,0" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="header-hero">
+        <header>
+            <a class="logo" href="#">
+                <h1 class="logo-ja">よつば幼稚園</h1>
+                <h2 class="logo-en">YOTSUBA<br>KINDERGARTEN</h2>
+            </a>
+            <nav>
+                <button id="menu-open" class="menu-btn sp-only">
+                    <span class="material-symbols-rounded">menu</span>
+                    Menu
+                </button>
+                <div id="menu-panel">
+                    <button id="menu-close" class="menu-btn sp-only">
+                        <span class="material-symbols-rounded">close</span>
+                        Close
+                    </button>
+                    <ul class="menu-list upper">
+                        <li class="sp-only"><a href="#">トップページ</a></li>
+                        <li><a href="#about">園の紹介</a></li>
+                        <li><a href="#philosophy">園の特色</a></li>
+                        <li><a href="#life">生活風景</a></li>
+                        <li><a href="#information">入園案内</a></li>
+                        <li><a href="#topics">お知らせ</a></li>
+                    </ul>
+                    <ul class="menu-list lower">
+                        <li><a href="#contacts">お問い合わせ</a></li>
+                        <li><a href="#">採用情報</a></li>
+                        <li><a href="#">保護者様ページ</a></li>
+                    </ul>
+                    <img class="image-menu sp-only" src="images/menu-kindergarten.png" width="620" height="360" alt="">
+                </div>
+            </nav>
+        </header>
+        <section id="hero">
+            <div class="hero__images">
+                <img class="image-bg" src="images/hero-bg.jpg" width="640" height="427" alt="">
+                <img class="image-kindergarten" src="images/kindergarten.png" width="400" height="300" alt="">
+                <img class="image-tree" src="images/tree.png" width="2540" height="200" alt="">
+                <img class="image-bus" src="images/bus.png" width="800" height="800" alt="">
+            </div>
+            <div class="hero-textbox wrapper">
+                <p class="headline">あかるく、のびのび、<br>ゆたかなココロをはぐくむ。</p>
+                <p class="text fadein">
+                    本ページはポートフォリオサイトです。<br>
+                    架空の幼稚園をイメージし制作しています。<br><br>
+                    お子様やご家族様がターゲットのため、<br>
+                    暖かさや可愛らしさをアピールしています。<br>
+                    ぬくもりのある背景に画像やテキストを<br>
+                    アニメーション効果で<br class="sp-only">楽しさあふれる動きにしています。<br><br>
+                    イラスト素材は10秒でざいん様、<br>
+                    写真素材は写真AC様に<br class="sp-only">素材をお借りしています。
+                </p>
+                <img class="image-flower01" src="images/sunflower.png" width="400" height="400" alt="">
+                <img class="image-flower02" src="images/sunflower.png" width="400" height="400" alt="">
+                <img class="image-flower03" src="images/sunflower.png" width="400" height="400" alt="">
+                <img class="image-flower04" src="images/sunflower.png" width="400" height="400" alt="">
+            </div>
+            <div class="hero-topicsbox">
+                <p class="box-title">お知らせ</p>
+                <a class="box-desc" href="#">令和〇年度 入園募集について</a>
+            </div>
+        </section>
+    </div>
+
+    <div class="about-philosophy-life">
+        <div class="container wrapper">
+            <section id="about">
+                <img class="section-image" width="640" height="427" src="images/about.jpg" alt="">
+                <div class="section-text">
+                    <h3 class="section-title">園の紹介</h3>
+                    <p>
+                        園の概要やアクセス情報、園舎や園庭などの施設をご紹介します。
+                    </p>
+                    <a class="btn primary" href="#">
+                        詳細
+                        <span class="material-symbols-rounded">
+                            arrow_forward
+                        </span>
+                    </a>
+                </div>
+            </section>
+
+            <section id="philosophy">
+                <img class="section-image" width="640" height="427" src="images/philosophy.jpg" alt="">
+                <div class="section-text">
+                    <h3 class="section-title">園の特色</h3>
+                    <p>
+                        幼児期にふさわしい生活リズムを大切にしています。
+                    </p>
+                    <a class="btn primary" href="#">
+                        詳細
+                        <span class="material-symbols-rounded">
+                            arrow_forward
+                        </span>
+                    </a>
+                </div>
+            </section>
+
+            <section id="life">
+                <img class="section-image" width="640" height="427" src="images/life.jpg" alt="">
+                <div class="section-text">
+                    <h3 class="section-title">生活風景</h3>
+                    <p>
+                        様々な経験を通して成長できるよう、伝承行事や季節にあった行事を予定しています。
+                    </p>
+                    <a class="btn primary" href="#">
+                        詳細
+                        <span class="material-symbols-rounded">
+                            arrow_forward
+                        </span>
+                    </a>
+                </div>
+            </section>
+
+            <div class="image-philosophy">
+                <img class="image-bird01" width="400" height="400" src="images/bird.png" alt="">
+                <img class="image-bird02" width="400" height="400" src="images/bird.png" alt="">
+            </div>
+
+            <div class="image-life">
+                <img id="piano" class="image-piano" width="400" height="400" src="images/piano.png" alt="">
+                <img class="image-kureyon" width="400" height="400" src="images/kureyon.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <section id="information">
+        <img class="section-image" width="640" height="427" src="images/information.jpg" alt="">
+        <div class="section-content wrapper">
+            <h3 class="section-title">入園案内について</h3>
+            <div class="section-text">
+                <p>
+                    3歳児からの入園の案内や、未就園児を対象とした無料体験保育などをご紹介します。
+                </p>
+                <a class="btn primary" href="#">
+                    詳細
+                    <span class="material-symbols-rounded">
+                        arrow_forward
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="image-information">
+            <img class="image-boy" width="400" height="400" src="images/boy.png" alt="">
+            <img class="image-girl" width="400" height="400" src="images/girl.png" alt="">
+        </div>
+    </section>
+
+    <section id="topics" class="wrapper">
+        <div class="section-content">
+            <h3 class="section-title">お知らせ</h3>
+            <ul class="topics-items">
+                <li>
+                    <a href="#">
+                        <p class="topics-date">20XX.11.10</p>
+                        <p class="topics-title">園児募集について</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="topics-date">20XX.10.1</p>
+                        <p class="topics-title">園舎見学会への参加申し込み受付中</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <p class="topics-date">20XX.7.1</p>
+                        <p class="topics-title">採用情報</p>
+                    </a>
+                </li>
+            </ul>
+            <a class="btn primary" href="#">
+                一覧
+                <span class="material-symbols-rounded">
+                    arrow_forward
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <section id="contacts">
+        <div class="section-content wrapper sp-only">
+            <h3 class="section-title">お問い合わせ</h3>
+            <p class="contacts-text">当園の資料請求、ご見学やご相談など<br>お気軽にお問い合わせください。</p>
+            <a class="btn secondary" href="#">
+                お問い合わせ
+                <span class="material-symbols-rounded">
+                    arrow_forward
+                </span>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer__images">
+            <img class="image-kindergarten" src="images/kindergarten.png" width="400" height="300" alt="">
+            <img class="image-tree" src="images/tree.png" width="2540" height="200" alt="">
+            <img class="image-butterfly" src="images/menu-butterfly.png" alt="">
+        </div>
+        <div class="footer__contents">
+            <div class="footer__contents__text">
+                <a class="logo" href="#">
+                    <h1 class="logo-ja">よつば幼稚園</h1>
+                    <h2 class="logo-en">YOTSUBA<br>KINDERGARTEN</h2>
+                </a>
+                <p class="address">〒000-0000<br>〇〇県〇〇市〇〇000-00</p>
+                <a class="map" href="#">(Google Map)</a>
+                <p class="tel">TEL. 00-0000-0000</p>
+            </div>
+            <div class="footer__contents__contacts pc-only">
+                <p class="contacts-text">当園の資料請求やご見学、その他ご相談などお気軽にお問い合わせください。</p>
+                <a class="btn secondary" href="#">
+                    お問い合わせ
+                    <span class="material-symbols-rounded">
+                        arrow_forward
+                    </span>
+                </a>
+            </div>
+        </div>
+        <ul class="footer__menu pc-only">
+            <li><a href="#">トップページ</a></li>
+            <li><a href="#about">園の紹介</a></li>
+            <li><a href="#philosophy">園の特色</a></li>
+            <li><a href="#life">生活風景</a></li>
+            <li><a href="#information">入園案内</a></li>
+            <li><a href="#topics">お知らせ</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+            <li><a href="#">採用情報</a></li>
+            <li><a href="#">保護者様ページ</a></li>
+        </ul>
+        <p class="copy"><small>&copy;YOTSUBA KINDERGARTEN</small></p>
+    </footer>
+</body>
+
+</html>
